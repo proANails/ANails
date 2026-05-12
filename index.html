@@ -1,32 +1,62 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>A'Nails — Prothésiste Ongulaire à Domicile · Montpellier</title>
-  <link rel="icon" type="image/jpeg" href="uploads/res/img_web/logo.jpg">
+
+  <!-- Open Graph / Réseaux sociaux & Messages -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://proanails.github.io/ANails/">
+  <meta property="og:title" content="A'Nails — Prothésiste Ongulaire à Domicile">
+  <meta property="og:description"
+    content="Découvrez mes créations de nail art et prenez rendez-vous pour sublimer vos ongles à domicile sur Montpellier et ses alentours.">
+  <meta property="og:image" content="https://proanails.github.io/ANails/uploads/res/img_web/amande_rose.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://proanails.github.io/ANails/">
+  <meta property="twitter:title" content="A'Nails — Prothésiste Ongulaire à Domicile">
+  <meta property="twitter:description"
+    content="Découvrez mes créations de nail art et prenez rendez-vous pour sublimer vos ongles à domicile sur Montpellier et ses alentours.">
+  <meta property="twitter:image" content="https://proanails.github.io/ANails/uploads/res/img_web/amande_rose.jpg">
+
+  <link rel="icon" type="image/png" href="uploads/res/img_web/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@200;300;400;500&family=Pinyon+Script&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@200;300;400;500&family=Pinyon+Script&display=swap"
+    rel="stylesheet">
 
   <style>
     :root {
-      --black:      #080808;
+      --black: #080808;
       --black-soft: #101010;
-      --charcoal:   #181614;
-      --cream:      #FAF8F4;
-      --cream-dk:   #F0EBE1;
-      --white:      #FFFFFF;
-      --gold:       #C4A46B;
-      --gold-lt:    #DEC891;
-      --gold-dk:    #9B7D45;
-      --text:       #1A1714;
-      --text-mid:   #5A5048;
-      --nav-h:      70px;
+      --charcoal: #181614;
+      --cream: #FAF8F4;
+      --cream-dk: #F0EBE1;
+      --white: #FFFFFF;
+      --gold: #C4A46B;
+      --gold-lt: #DEC891;
+      --gold-dk: #9B7D45;
+      --text: #1A1714;
+      --text-mid: #5A5048;
+      --nav-h: 70px;
     }
 
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: 'Jost', sans-serif;
       font-weight: 300;
@@ -34,119 +64,204 @@
       color: var(--cream);
       overflow-x: hidden;
     }
-    a { text-decoration: none; color: inherit; }
-    img { display: block; }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      display: block;
+    }
 
     /* ── NAV ─────────────────────────────────── */
     #nav {
-      position: fixed; inset: 0 0 auto 0; z-index: 200;
+      position: fixed;
+      inset: 0 0 auto 0;
+      z-index: 200;
       height: var(--nav-h);
-      display: flex; align-items: center;
+      display: flex;
+      align-items: center;
       justify-content: space-between;
       padding: 0 56px;
       transition: background .4s, border-color .4s, backdrop-filter .4s;
       border-bottom: 1px solid transparent;
     }
+
     #nav.solid {
-      background: rgba(8,8,8,.94);
+      background: rgba(8, 8, 8, .94);
       backdrop-filter: blur(18px);
-      border-color: rgba(196,164,107,.12);
+      border-color: rgba(196, 164, 107, .12);
     }
+
     .nav-logo-wrap {
-      width: 44px; height: 44px;
-      border-radius: 50%; overflow: hidden;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      overflow: hidden;
       flex-shrink: 0;
-      border: 1.5px solid rgba(250,248,244,.55);
-      background: #fff;
+      border: 1.5px solid rgba(250, 248, 244, .55);
+      background: transparent;
     }
+
     .nav-logo-img {
-      width: 100%; height: 100%;
-      object-fit: cover; object-position: center;
-      filter: invert(1);
-      mix-blend-mode: multiply;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      mix-blend-mode: screen;
     }
-    .nav-links { display: flex; gap: 44px; list-style: none; }
+
+    .nav-links {
+      display: flex;
+      gap: 44px;
+      list-style: none;
+    }
+
     .nav-links a {
-      font-size: 10px; font-weight: 400;
-      letter-spacing: .22em; text-transform: uppercase;
-      color: rgba(250,248,244,.6); transition: color .2s;
+      font-size: 10px;
+      font-weight: 400;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: rgba(250, 248, 244, .6);
+      transition: color .2s;
     }
-    .nav-links a:hover { color: var(--gold); }
-    .nav-book {
-      font-size: 10px; font-weight: 400;
-      letter-spacing: .22em; text-transform: uppercase;
+
+    .nav-links a:hover {
       color: var(--gold);
-      border: 1px solid rgba(196,164,107,.5);
-      padding: 10px 26px; transition: all .25s;
     }
-    .nav-book:hover { background: var(--gold); color: var(--black); border-color: var(--gold); }
+
+    .nav-book {
+      font-size: 10px;
+      font-weight: 400;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      border: 1px solid rgba(196, 164, 107, .5);
+      padding: 10px 26px;
+      transition: all .25s;
+    }
+
+    .nav-book:hover {
+      background: var(--gold);
+      color: var(--black);
+      border-color: var(--gold);
+    }
+
     .nav-burger {
-      display: none; flex-direction: column;
-      gap: 5px; cursor: pointer; padding: 4px;
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
     }
-    .nav-burger span { display: block; width: 22px; height: 1px; background: var(--cream); }
+
+    .nav-burger span {
+      display: block;
+      width: 22px;
+      height: 1px;
+      background: var(--cream);
+    }
 
     /* ── MOBILE MENU ─────────────────────────── */
     #mob-menu {
-      display: none; position: fixed; inset: 0;
-      background: var(--black); z-index: 199;
-      flex-direction: column; align-items: center;
-      justify-content: center; gap: 36px;
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: var(--black);
+      z-index: 199;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 36px;
     }
-    #mob-menu.open { display: flex; }
+
+    #mob-menu.open {
+      display: flex;
+    }
+
     #mob-menu a {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 38px; color: var(--cream); transition: color .2s;
+      font-size: 38px;
+      color: var(--cream);
+      transition: color .2s;
     }
-    #mob-menu a:hover { color: var(--gold); }
+
+    #mob-menu a:hover {
+      color: var(--gold);
+    }
+
     #mob-menu .mob-close {
-      position: absolute; top: 20px; right: 24px;
-      background: none; border: none;
-      color: var(--cream); font-size: 28px; cursor: pointer;
+      position: absolute;
+      top: 20px;
+      right: 24px;
+      background: none;
+      border: none;
+      color: var(--cream);
+      font-size: 28px;
+      cursor: pointer;
     }
+
     #mob-menu .mob-cta {
       font-family: 'Jost', sans-serif !important;
-      font-size: 12px !important; letter-spacing: .25em;
+      font-size: 12px !important;
+      letter-spacing: .25em;
       color: var(--gold) !important;
-      border: 1px solid rgba(196,164,107,.4);
+      border: 1px solid rgba(196, 164, 107, .4);
       padding: 14px 40px;
     }
 
     /* ── HERO ────────────────────────────────── */
     #hero {
-      height: 100vh; min-height: 600px;
-      display: flex; align-items: center; justify-content: center;
-      position: relative; overflow: hidden;
+      height: 100vh;
+      min-height: 600px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
     }
+
     .hero-bg {
-      position: absolute; inset: 0;
+      position: absolute;
+      inset: 0;
       background: url('uploads/res/img_web/amande_rose.jpg') center/cover no-repeat;
       transform: scale(1.06);
       transition: transform 10s ease;
     }
-    #hero:hover .hero-bg { transform: scale(1.01); }
-    .hero-overlay {
-      position: absolute; inset: 0;
-      background: linear-gradient(
-        160deg,
-        rgba(0,0,0,.62) 0%,
-        rgba(0,0,0,.42) 45%,
-        rgba(0,0,0,.72) 100%
-      );
+
+    #hero:hover .hero-bg {
+      transform: scale(1.01);
     }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(160deg,
+          rgba(0, 0, 0, .62) 0%,
+          rgba(0, 0, 0, .42) 45%,
+          rgba(0, 0, 0, .72) 100%);
+    }
+
     .hero-inner {
-      position: relative; z-index: 1;
-      display: flex; flex-direction: column;
-      align-items: center; text-align: center;
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
       padding: 0 24px;
       gap: 0;
     }
+
     .hero-logo-box {
-      display: flex; flex-direction: column;
+      display: flex;
+      flex-direction: column;
       align-items: center;
       margin-bottom: 44px;
       animation: fadeUp .9s ease both;
     }
+
     .hero-logo-name {
       font-family: 'Pinyon Script', cursive;
       font-size: clamp(72px, 10vw, 110px);
@@ -155,102 +270,207 @@
       line-height: 1;
       letter-spacing: .01em;
     }
+
     .hero-logo-sub {
       font-family: 'Jost', sans-serif;
-      font-size: 7px; font-weight: 300;
-      letter-spacing: .52em; text-transform: uppercase;
+      font-size: 7px;
+      font-weight: 300;
+      letter-spacing: .52em;
+      text-transform: uppercase;
       color: var(--gold-lt);
       margin-top: 10px;
     }
+
     .hero-eyebrow {
-      font-size: 10px; font-weight: 400;
-      letter-spacing: .38em; text-transform: uppercase;
-      color: rgba(250,248,244,.75);
+      font-size: 10px;
+      font-weight: 400;
+      letter-spacing: .38em;
+      text-transform: uppercase;
+      color: rgba(250, 248, 244, .75);
       margin-bottom: 16px;
       animation: fadeUp .9s .14s ease both;
     }
+
     .hero-rule {
-      width: 64px; height: 1px;
+      width: 64px;
+      height: 1px;
       background: linear-gradient(90deg, transparent, var(--gold), transparent);
       margin: 0 auto 16px;
       animation: fadeUp .9s .2s ease both;
     }
+
     .hero-title {
       font-family: 'Cormorant Garamond', serif;
       font-size: clamp(34px, 5.5vw, 64px);
-      font-weight: 300; font-style: italic;
-      line-height: 1.15; color: var(--cream);
+      font-weight: 300;
+      font-style: italic;
+      line-height: 1.15;
+      color: var(--cream);
       margin-bottom: 12px;
       animation: fadeUp .9s .26s ease both;
     }
+
     .hero-location {
-      font-size: 10px; font-weight: 300;
-      letter-spacing: .28em; text-transform: uppercase;
-      color: rgba(250,248,244,.45);
+      font-size: 10px;
+      font-weight: 300;
+      letter-spacing: .28em;
+      text-transform: uppercase;
+      color: rgba(250, 248, 244, .45);
       margin-bottom: 52px;
       animation: fadeUp .9s .32s ease both;
     }
+
     .hero-cta {
       display: inline-block;
-      font-size: 10px; font-weight: 400;
-      letter-spacing: .28em; text-transform: uppercase;
+      font-size: 10px;
+      font-weight: 400;
+      letter-spacing: .28em;
+      text-transform: uppercase;
       color: var(--black);
-      background: rgba(196,164,107,.93);
+      background: rgba(196, 164, 107, .93);
       padding: 15px 48px;
       transition: background .3s, transform .2s;
       animation: fadeUp .9s .40s ease both;
     }
-    .hero-cta:hover { background: var(--gold-lt); transform: translateY(-2px); }
-    .hero-scroll {
-      position: absolute; bottom: 32px; left: 50%;
-      transform: translateX(-50%);
-      z-index: 1; opacity: .4;
+
+    .hero-cta:hover {
+      background: var(--gold-lt);
+      transform: translateY(-2px);
     }
+
+    .hero-scroll {
+      position: absolute;
+      bottom: 32px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+      opacity: .4;
+    }
+
     .hero-scroll-line {
-      width: 1px; height: 48px;
+      width: 1px;
+      height: 48px;
       background: linear-gradient(to bottom, var(--gold), transparent);
       animation: scrollDrop 2.2s ease-in-out infinite;
     }
 
     @keyframes scrollDrop {
-      0%   { transform: scaleY(0); transform-origin: top; opacity: 0; }
-      40%  { transform: scaleY(1); transform-origin: top; opacity: 1; }
-      80%  { transform: scaleY(1); transform-origin: bottom; opacity: 0; }
-      100% { transform: scaleY(0); transform-origin: bottom; opacity: 0; }
+      0% {
+        transform: scaleY(0);
+        transform-origin: top;
+        opacity: 0;
+      }
+
+      40% {
+        transform: scaleY(1);
+        transform-origin: top;
+        opacity: 1;
+      }
+
+      80% {
+        transform: scaleY(1);
+        transform-origin: bottom;
+        opacity: 0;
+      }
+
+      100% {
+        transform: scaleY(0);
+        transform-origin: bottom;
+        opacity: 0;
+      }
     }
+
     @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to   { opacity: 1; transform: none; }
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: none;
+      }
     }
 
     /* ── SECTIONS ────────────────────────────── */
-    .section { padding: 108px 56px; }
-    .s-label {
-      display: block; font-size: 9px; font-weight: 400;
-      letter-spacing: .44em; text-transform: uppercase;
-      color: var(--gold); margin-bottom: 18px;
+    .section {
+      padding: 108px 56px;
     }
+
+    .s-label {
+      display: block;
+      font-size: 9px;
+      font-weight: 400;
+      letter-spacing: .44em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 18px;
+    }
+
     .s-title {
       font-family: 'Cormorant Garamond', serif;
       font-size: clamp(36px, 5vw, 58px);
-      font-weight: 300; line-height: 1.05;
+      font-weight: 300;
+      line-height: 1.05;
     }
-    .s-rule { width: 52px; height: 1px; background: var(--gold); margin: 28px 0; }
+
+    .s-rule {
+      width: 52px;
+      height: 1px;
+      background: var(--gold);
+      margin: 28px 0;
+    }
 
     /* ── SCROLL REVEAL ───────────────────────── */
-    .r { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s ease; }
-    .r.on { opacity: 1; transform: none; }
-    .r1 { transition-delay: .08s; }
-    .r2 { transition-delay: .16s; }
-    .r3 { transition-delay: .24s; }
-    .r4 { transition-delay: .32s; }
-    .r5 { transition-delay: .40s; }
+    .r {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+
+    .r.on {
+      opacity: 1;
+      transform: none;
+    }
+
+    .r1 {
+      transition-delay: .08s;
+    }
+
+    .r2 {
+      transition-delay: .16s;
+    }
+
+    .r3 {
+      transition-delay: .24s;
+    }
+
+    .r4 {
+      transition-delay: .32s;
+    }
+
+    .r5 {
+      transition-delay: .40s;
+    }
 
     /* ── PRESTATIONS ─────────────────────────── */
-    #prestations { background: var(--cream); color: var(--text); }
-    .prest-inner { max-width: 1200px; margin: 0 auto; }
-    .prest-inner .s-label { color: var(--gold-dk); }
-    .prest-inner .s-rule  { background: var(--gold-dk); }
+    #prestations {
+      background: var(--cream);
+      color: var(--text);
+    }
+
+    .prest-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .prest-inner .s-label {
+      color: var(--gold-dk);
+    }
+
+    .prest-inner .s-rule {
+      background: var(--gold-dk);
+    }
 
     .prest-grid {
       display: grid;
@@ -259,73 +479,157 @@
       background: var(--cream-dk);
       margin-top: 64px;
     }
+
     .pcard {
       background: var(--cream);
-      display: flex; flex-direction: column;
-      overflow: hidden; transition: background .3s;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      transition: background .3s;
     }
-    .pcard:hover { background: var(--white); }
-    .pcard-img-wrap { overflow: hidden; flex-shrink: 0; }
+
+    .pcard:hover {
+      background: var(--white);
+    }
+
+    .pcard-img-wrap {
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
     .pcard-img {
-      width: 100%; aspect-ratio: 3/4;
-      object-fit: cover; object-position: center;
+      width: 100%;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      object-position: center;
       transition: transform .55s ease;
     }
-    .pcard:hover .pcard-img { transform: scale(1.04); }
-    .pcard-body { padding: 28px 26px 34px; flex: 1; display: flex; flex-direction: column; }
-    .pcard-cat {
-      font-size: 8.5px; font-weight: 400;
-      letter-spacing: .42em; text-transform: uppercase;
-      color: var(--gold-dk); margin-bottom: 10px;
+
+    .pcard:hover .pcard-img {
+      transform: scale(1.04);
     }
+
+    .pcard-body {
+      padding: 28px 26px 34px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .pcard-cat {
+      font-size: 8.5px;
+      font-weight: 400;
+      letter-spacing: .42em;
+      text-transform: uppercase;
+      color: var(--gold-dk);
+      margin-bottom: 10px;
+    }
+
     .pcard-name {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 20px; font-weight: 400;
-      line-height: 1.2; color: var(--text); margin-bottom: 10px;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 1.2;
+      color: var(--text);
+      margin-bottom: 10px;
     }
+
     .pcard-desc {
-      font-size: 12px; font-weight: 300;
-      color: var(--text-mid); line-height: 1.7;
-      flex: 1; margin-bottom: 20px;
+      font-size: 12px;
+      font-weight: 300;
+      color: var(--text-mid);
+      line-height: 1.7;
+      flex: 1;
+      margin-bottom: 20px;
     }
+
     .pcard-price {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 40px; font-weight: 300;
-      color: var(--gold-dk); line-height: 1;
+      font-size: 40px;
+      font-weight: 300;
+      color: var(--gold-dk);
+      line-height: 1;
     }
+
     .pcard-note {
-      font-size: 10.5px; font-weight: 300;
-      color: var(--text-mid); margin-top: 6px;
+      font-size: 10.5px;
+      font-weight: 300;
+      color: var(--text-mid);
+      margin-top: 6px;
     }
-    .pcard-dark { background: var(--black) !important; }
-    .pcard-dark .pcard-cat  { color: var(--gold); }
-    .pcard-dark .pcard-name { color: var(--cream); }
-    .pcard-dark .pcard-desc { color: rgba(250,248,244,.48); }
-    .pcard-dark .pcard-price { color: var(--gold); }
-    .pcard-dark .pcard-note { color: rgba(250,248,244,.35); }
+
+    .pcard-dark {
+      background: var(--black) !important;
+    }
+
+    .pcard-dark .pcard-cat {
+      color: var(--gold);
+    }
+
+    .pcard-dark .pcard-name {
+      color: var(--cream);
+    }
+
+    .pcard-dark .pcard-desc {
+      color: rgba(250, 248, 244, .48);
+    }
+
+    .pcard-dark .pcard-price {
+      color: var(--gold);
+    }
+
+    .pcard-dark .pcard-note {
+      color: rgba(250, 248, 244, .35);
+    }
 
     .depose {
-      background: var(--charcoal); color: var(--cream);
+      background: var(--charcoal);
+      color: var(--cream);
       padding: 36px 40px;
-      display: flex; align-items: center;
+      display: flex;
+      align-items: center;
       justify-content: space-between;
-      margin-top: 2px; gap: 24px;
+      margin-top: 2px;
+      gap: 24px;
     }
-    .depose-left { display: flex; flex-direction: column; gap: 6px; }
+
+    .depose-left {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
     .depose-name {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 26px; font-style: italic; font-weight: 300;
+      font-size: 26px;
+      font-style: italic;
+      font-weight: 300;
     }
-    .depose-note { font-size: 11px; font-weight: 300; color: rgba(250,248,244,.38); }
+
+    .depose-note {
+      font-size: 11px;
+      font-weight: 300;
+      color: rgba(250, 248, 244, .38);
+    }
+
     .depose-price {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 38px; font-weight: 300;
-      color: var(--gold); flex-shrink: 0;
+      font-size: 38px;
+      font-weight: 300;
+      color: var(--gold);
+      flex-shrink: 0;
     }
 
     /* ── GALERIE ─────────────────────────────── */
-    #galerie { background: var(--black-soft); color: var(--cream); }
-    .galerie-inner { max-width: 1200px; margin: 0 auto; }
+    #galerie {
+      background: var(--black-soft);
+      color: var(--cream);
+    }
+
+    .galerie-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
 
     .gal-grid {
       display: grid;
@@ -334,639 +638,879 @@
       gap: 3px;
       margin-top: 64px;
     }
+
     .g-item {
-      overflow: hidden; position: relative;
+      overflow: hidden;
+      position: relative;
       background: var(--charcoal);
     }
-    .g-item img, .g-item video {
-      width: 100%; height: 100%;
-      object-fit: cover; object-position: center;
+
+    .g-item img,
+    .g-item video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
       transition: transform .65s ease;
     }
-    .g-item:hover img,
-    .g-item:hover video { transform: scale(1.05); }
 
-    .g-tall  { grid-row: span 2; }
-    .g-wide  { grid-column: span 2; }
+    .g-item:hover img,
+    .g-item:hover video {
+      transform: scale(1.05);
+    }
+
+    .g-tall {
+      grid-row: span 2;
+    }
+
+    .g-wide {
+      grid-column: span 2;
+    }
 
     .g-badge {
-      position: absolute; bottom: 12px; right: 12px;
-      background: rgba(0,0,0,.48); backdrop-filter: blur(4px);
-      color: rgba(250,248,244,.65);
-      font-size: 8.5px; font-weight: 400;
-      letter-spacing: .22em; text-transform: uppercase;
+      position: absolute;
+      bottom: 12px;
+      right: 12px;
+      background: rgba(0, 0, 0, .48);
+      backdrop-filter: blur(4px);
+      color: rgba(250, 248, 244, .65);
+      font-size: 8.5px;
+      font-weight: 400;
+      letter-spacing: .22em;
+      text-transform: uppercase;
       padding: 5px 10px;
       pointer-events: none;
       font-family: 'Jost', sans-serif;
     }
 
     /* ── ZONE ────────────────────────────────── */
-    #zone { background: var(--black); color: var(--cream); }
+    #zone {
+      background: var(--black);
+      color: var(--cream);
+    }
+
     .zone-inner {
-      max-width: 1080px; margin: 0 auto;
-      display: grid; grid-template-columns: 1fr 1fr;
-      gap: 80px; align-items: start;
+      max-width: 1080px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
     }
-    .zone-list { margin-top: 48px; }
+
+    .zone-list {
+      margin-top: 48px;
+    }
+
     .zone-item {
-      display: flex; align-items: center;
-      gap: 18px; padding: 15px 0;
-      border-bottom: 1px solid rgba(196,164,107,.1);
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      padding: 15px 0;
+      border-bottom: 1px solid rgba(196, 164, 107, .1);
       font-family: 'Cormorant Garamond', serif;
-      font-size: 21px; font-weight: 300;
+      font-size: 21px;
+      font-weight: 300;
     }
+
     .zone-item::before {
-      content: ''; width: 4px; height: 4px;
-      background: var(--gold); border-radius: 50%; flex-shrink: 0;
+      content: '';
+      width: 4px;
+      height: 4px;
+      background: var(--gold);
+      border-radius: 50%;
+      flex-shrink: 0;
     }
-    .zone-img-wrap { overflow: hidden; }
+
+    .zone-img-wrap {
+      overflow: hidden;
+    }
+
     .zone-img {
-      width: 100%; aspect-ratio: 3/4;
-      object-fit: cover; object-position: center 20%;
+      width: 100%;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      object-position: center 20%;
       filter: brightness(.9);
       transition: transform .8s ease;
     }
-    .zone-img-wrap:hover .zone-img { transform: scale(1.02); }
+
+    .zone-img-wrap:hover .zone-img {
+      transform: scale(1.02);
+    }
 
     /* ── RESERVATION ─────────────────────────── */
     #reservation {
-      background: var(--cream); color: var(--text);
-      text-align: center; padding: 128px 56px;
+      background: var(--cream);
+      color: var(--text);
+      text-align: center;
+      padding: 128px 56px;
     }
-    .resa-inner { max-width: 680px; margin: 0 auto; }
+
+    .resa-inner {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
     .resa-eyebrow {
-      font-size: 9px; font-weight: 400;
-      letter-spacing: .44em; text-transform: uppercase;
-      color: rgba(155,125,69,.7); margin-bottom: 20px;
+      font-size: 9px;
+      font-weight: 400;
+      letter-spacing: .44em;
+      text-transform: uppercase;
+      color: rgba(155, 125, 69, .7);
+      margin-bottom: 20px;
     }
+
     .resa-title {
       font-family: 'Cormorant Garamond', serif;
       font-size: clamp(48px, 8vw, 88px);
-      font-weight: 300; line-height: .95;
-      color: var(--text); margin-bottom: 24px;
+      font-weight: 300;
+      line-height: .95;
+      color: var(--text);
+      margin-bottom: 24px;
     }
+
     .resa-sub {
-      font-size: 13px; font-weight: 300;
-      color: var(--text-mid); line-height: 1.75;
+      font-size: 13px;
+      font-weight: 300;
+      color: var(--text-mid);
+      line-height: 1.75;
       margin-bottom: 52px;
     }
+
     .btn-resa {
       display: inline-block;
-      font-size: 10px; font-weight: 400;
-      letter-spacing: .28em; text-transform: uppercase;
+      font-size: 10px;
+      font-weight: 400;
+      letter-spacing: .28em;
+      text-transform: uppercase;
       color: var(--white);
-      background: var(--black); padding: 18px 60px;
+      background: var(--black);
+      padding: 18px 60px;
       border: 1px solid var(--black);
       transition: all .3s;
     }
-    .btn-resa:hover { background: var(--gold-dk); border-color: var(--gold-dk); }
+
+    .btn-resa:hover {
+      background: var(--gold-dk);
+      border-color: var(--gold-dk);
+    }
 
     /* ── CONTACT ─────────────────────────────── */
-    #contact { background: var(--black); color: var(--cream); text-align: center; }
-    .contact-inner { max-width: 760px; margin: 0 auto; }
+    #contact {
+      background: var(--black);
+      color: var(--cream);
+      text-align: center;
+    }
+
+    .contact-inner {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
     .contact-links {
-      display: flex; justify-content: center;
-      gap: 60px; margin-top: 56px; flex-wrap: wrap;
+      display: flex;
+      justify-content: center;
+      gap: 60px;
+      margin-top: 56px;
+      flex-wrap: wrap;
     }
+
     .clink {
-      display: flex; flex-direction: column;
-      align-items: center; gap: 14px;
-      color: var(--cream); transition: color .25s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      color: var(--cream);
+      transition: color .25s;
     }
-    .clink:hover { color: var(--gold); }
+
+    .clink:hover {
+      color: var(--gold);
+    }
+
     .clink-icon {
-      width: 52px; height: 52px;
-      border: 1px solid rgba(196,164,107,.25);
+      width: 52px;
+      height: 52px;
+      border: 1px solid rgba(196, 164, 107, .25);
       border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       transition: border-color .25s;
     }
-    .clink:hover .clink-icon { border-color: var(--gold); }
-    .clink-label {
-      font-size: 9px; font-weight: 400;
-      letter-spacing: .32em; text-transform: uppercase;
+
+    .clink:hover .clink-icon {
+      border-color: var(--gold);
     }
+
+    .clink-label {
+      font-size: 9px;
+      font-weight: 400;
+      letter-spacing: .32em;
+      text-transform: uppercase;
+    }
+
     .clink-val {
-      font-size: 11px; font-weight: 300;
-      color: rgba(250,248,244,.38); margin-top: -8px;
+      font-size: 11px;
+      font-weight: 300;
+      color: rgba(250, 248, 244, .38);
+      margin-top: -8px;
     }
 
     /* ── FOOTER ──────────────────────────────── */
     footer {
       background: var(--black);
-      border-top: 1px solid rgba(196,164,107,.08);
+      border-top: 1px solid rgba(196, 164, 107, .08);
       padding: 28px 56px;
-      display: flex; align-items: center;
+      display: flex;
+      align-items: center;
       justify-content: space-between;
-      flex-wrap: wrap; gap: 12px;
+      flex-wrap: wrap;
+      gap: 12px;
     }
+
     .footer-logo {
       height: 34px;
       filter: invert(1);
       mix-blend-mode: screen;
       opacity: .45;
     }
+
     .footer-copy {
-      font-size: 9px; font-weight: 300;
-      letter-spacing: .16em; text-transform: uppercase;
-      color: rgba(250,248,244,.18);
+      font-size: 9px;
+      font-weight: 300;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: rgba(250, 248, 244, .18);
     }
 
     /* ── TWEAKS ──────────────────────────────── */
     #tweaks {
-      display: none; position: fixed; bottom: 28px; right: 28px;
-      z-index: 500; width: 240px;
-      background: rgba(10,8,6,.96); backdrop-filter: blur(20px);
-      border: 1px solid rgba(196,164,107,.2);
+      display: none;
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 500;
+      width: 240px;
+      background: rgba(10, 8, 6, .96);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(196, 164, 107, .2);
       font-family: 'Jost', sans-serif;
     }
+
     .tw-hd {
-      display: flex; align-items: center; justify-content: space-between;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       padding: 14px 16px;
-      border-bottom: 1px solid rgba(196,164,107,.12);
+      border-bottom: 1px solid rgba(196, 164, 107, .12);
     }
+
     .tw-hd-title {
-      font-size: 9px; font-weight: 400;
-      letter-spacing: .3em; text-transform: uppercase; color: var(--gold);
+      font-size: 9px;
+      font-weight: 400;
+      letter-spacing: .3em;
+      text-transform: uppercase;
+      color: var(--gold);
     }
+
     .tw-x {
-      background: none; border: none;
-      color: rgba(250,248,244,.35); cursor: pointer; font-size: 16px;
+      background: none;
+      border: none;
+      color: rgba(250, 248, 244, .35);
+      cursor: pointer;
+      font-size: 16px;
       transition: color .2s;
     }
-    .tw-x:hover { color: var(--cream); }
-    .tw-body { padding: 16px; display: flex; flex-direction: column; gap: 18px; }
-    .tw-gl {
-      font-size: 8.5px; font-weight: 400;
-      letter-spacing: .32em; text-transform: uppercase;
-      color: rgba(250,248,244,.32); margin-bottom: 8px;
+
+    .tw-x:hover {
+      color: var(--cream);
     }
-    .tw-swatches { display: flex; gap: 8px; }
+
+    .tw-body {
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .tw-gl {
+      font-size: 8.5px;
+      font-weight: 400;
+      letter-spacing: .32em;
+      text-transform: uppercase;
+      color: rgba(250, 248, 244, .32);
+      margin-bottom: 8px;
+    }
+
+    .tw-swatches {
+      display: flex;
+      gap: 8px;
+    }
+
     .tw-sw {
-      width: 28px; height: 28px; border-radius: 50%;
-      cursor: pointer; border: 2px solid transparent;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      cursor: pointer;
+      border: 2px solid transparent;
       transition: border-color .2s, transform .2s;
     }
-    .tw-sw.on { border-color: var(--cream); transform: scale(1.12); }
-    .tw-radios { display: flex; flex-direction: column; gap: 8px; }
+
+    .tw-sw.on {
+      border-color: var(--cream);
+      transform: scale(1.12);
+    }
+
+    .tw-radios {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
     .tw-radio {
-      display: flex; align-items: center; gap: 10px;
-      cursor: pointer; color: rgba(250,248,244,.55);
-      font-size: 11px; transition: color .2s;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      color: rgba(250, 248, 244, .55);
+      font-size: 11px;
+      transition: color .2s;
     }
-    .tw-radio:hover { color: var(--cream); }
+
+    .tw-radio:hover {
+      color: var(--cream);
+    }
+
     .tw-dot {
-      width: 12px; height: 12px; border-radius: 50%;
-      border: 1px solid rgba(196,164,107,.35); flex-shrink: 0;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      border: 1px solid rgba(196, 164, 107, .35);
+      flex-shrink: 0;
     }
-    .tw-radio.on { color: var(--cream); }
-    .tw-radio.on .tw-dot { background: var(--gold); border-color: var(--gold); }
+
+    .tw-radio.on {
+      color: var(--cream);
+    }
+
+    .tw-radio.on .tw-dot {
+      background: var(--gold);
+      border-color: var(--gold);
+    }
 
     /* ── RESPONSIVE ──────────────────────────── */
     @media (max-width: 1100px) {
-      .prest-grid { grid-template-columns: repeat(2, 1fr); }
-      .gal-grid   { grid-template-columns: repeat(2, 1fr); }
-      .g-tall     { grid-row: span 1; }
+      .prest-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .gal-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .g-tall {
+        grid-row: span 1;
+      }
     }
+
     @media (max-width: 768px) {
-      #nav { padding: 0 20px; }
-      .nav-links, .nav-book { display: none; }
-      .nav-burger { display: flex; }
-      .section { padding: 80px 24px; }
-      #reservation { padding: 80px 24px; }
-      .zone-inner { grid-template-columns: 1fr; gap: 40px; }
-      footer { padding: 24px; justify-content: center; text-align: center; }
-      .depose { flex-direction: column; align-items: flex-start; gap: 12px; }
-      .contact-links { gap: 40px; }
+      #nav {
+        padding: 0 20px;
+      }
+
+      .nav-links,
+      .nav-book {
+        display: none;
+      }
+
+      .nav-burger {
+        display: flex;
+      }
+
+      .section {
+        padding: 80px 24px;
+      }
+
+      #reservation {
+        padding: 80px 24px;
+      }
+
+      .zone-inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      footer {
+        padding: 24px;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .depose {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+      }
+
+      .contact-links {
+        gap: 40px;
+      }
     }
+
     @media (max-width: 600px) {
-      .prest-grid { grid-template-columns: 1fr; }
-      .gal-grid { grid-template-columns: 1fr 1fr; grid-auto-rows: 200px; }
-      .g-wide { grid-column: span 2; }
-      .g-tall { grid-row: span 1; }
+      .prest-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gal-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: 200px;
+      }
+
+      .g-wide {
+        grid-column: span 2;
+      }
+
+      .g-tall {
+        grid-row: span 1;
+      }
     }
   </style>
 </head>
+
 <body>
 
-<!-- ══ NAV ════════════════════════════════════════ -->
-<nav id="nav">
-  <a href="#" class="nav-logo-wrap">
-    <img src="uploads/res/img_web/logo.jpg" alt="A'Nails" class="nav-logo-img">
-  </a>
-  <ul class="nav-links">
-    <li><a href="#prestations">Prestations</a></li>
-    <li><a href="#galerie">Galerie</a></li>
-    <li><a href="#zone">Zone</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-  <a href="https://iarabeauty.com/fr/pro/a.nailspro" target="_blank" rel="noopener" class="nav-book">Réserver</a>
-  <div class="nav-burger" id="burger">
-    <span></span><span></span><span></span>
-  </div>
-</nav>
-
-<!-- ══ MOBILE MENU ═════════════════════════════════ -->
-<div id="mob-menu">
-  <button class="mob-close" id="mob-close">✕</button>
-  <a href="#prestations" onclick="closeMob()">Prestations</a>
-  <a href="#galerie" onclick="closeMob()">Galerie</a>
-  <a href="#zone" onclick="closeMob()">Zone</a>
-  <a href="#contact" onclick="closeMob()">Contact</a>
-  <a href="https://iarabeauty.com/fr/pro/a.nailspro" target="_blank" rel="noopener" class="mob-cta" onclick="closeMob()">Réserver</a>
-</div>
-
-<!-- ══ HERO ════════════════════════════════════════ -->
-<section id="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-overlay"></div>
-  <div class="hero-inner">
-
-    <div class="hero-logo-box">
-      <span class="hero-logo-name">A'Nails</span>
-      <span class="hero-logo-sub">Nail Tech</span>
-    </div>
-
-    <p class="hero-eyebrow">Prothésiste Ongulaire Certifiée</p>
-    <div class="hero-rule"></div>
-    <h1 class="hero-title">L'art des ongles,<br>à votre domicile</h1>
-    <p class="hero-location">Montpellier · Le Crès · Alentours</p>
-    <a href="https://iarabeauty.com/fr/pro/a.nailspro" target="_blank" rel="noopener" class="hero-cta">
-      Prendre rendez-vous
+  <!-- ══ NAV ════════════════════════════════════════ -->
+  <nav id="nav">
+    <a href="#" class="nav-logo-wrap">
+      <img src="uploads/res/img_web/logo.jpg" alt="A'Nails" class="nav-logo-img">
     </a>
-  </div>
-  <div class="hero-scroll" aria-hidden="true">
-    <div class="hero-scroll-line"></div>
-  </div>
-</section>
-
-<!-- ══ PRESTATIONS ══════════════════════════════════ -->
-<section id="prestations" class="section">
-  <div class="prest-inner">
-    <span class="s-label r">Nos services</span>
-    <h2 class="s-title r r1">Prestations<br>&amp; Tarifs</h2>
-    <div class="s-rule r r2"></div>
-
-    <div class="prest-grid">
-
-      <!-- Pose Américaine / Gel-X -->
-      <div class="pcard r r1">
-        <div class="pcard-img-wrap">
-          <img src="uploads/res/img_web/gel_x.jpg" alt="Pose américaine Gel-X" class="pcard-img">
-        </div>
-        <div class="pcard-body">
-          <p class="pcard-cat">Manucure</p>
-          <h3 class="pcard-name">Pose Américaine<br>Gel-X</h3>
-          <p class="pcard-desc">Pose de capsules en gel pour un effet naturel et durable. Idéal pour allonger ou renforcer les ongles.</p>
-          <div class="pcard-price">40€</div>
-          <p class="pcard-note">+ Option Nail Art : +5€</p>
-        </div>
-      </div>
-
-      <!-- Semi-permanent -->
-      <div class="pcard r r2">
-        <div class="pcard-img-wrap">
-          <img src="uploads/res/img_web/pot_de_gel.jpg" alt="Semi-permanent gel naturel" class="pcard-img" style="object-position: center 30%;">
-        </div>
-        <div class="pcard-body">
-          <p class="pcard-cat">Manucure</p>
-          <h3 class="pcard-name">Semi-Permanent<br>Gel naturel</h3>
-          <p class="pcard-desc">Vernis semi-permanent ou gel de couleur sur ongles naturels. Tenue jusqu'à 3 semaines, finition parfaite.</p>
-          <div class="pcard-price">25€</div>
-          <p class="pcard-note">+ Option Nail Art : +5€</p>
-        </div>
-      </div>
-
-      <!-- Nail Art -->
-      <div class="pcard pcard-dark r r3">
-        <div class="pcard-img-wrap">
-          <img src="uploads/res/img_web/nail_art_avant.jpg" alt="Nail art" class="pcard-img">
-        </div>
-        <div class="pcard-body">
-          <p class="pcard-cat">Option</p>
-          <h3 class="pcard-name">Nail Art</h3>
-          <p class="pcard-desc">Dégradés, motifs floraux, pierres, lignes graphiques… laissez libre cours à votre créativité.</p>
-          <div class="pcard-price">+5€</div>
-          <p class="pcard-note">À ajouter sur toute prestation</p>
-        </div>
-      </div>
-
-      <!-- Pédicure -->
-      <div class="pcard r r4">
-        <div class="pcard-img-wrap">
-          <img src="uploads/res/img_web/pédicure_french.JPG" alt="Pédicure semi-permanent french" class="pcard-img" style="object-position: center 15%;">
-        </div>
-        <div class="pcard-body">
-          <p class="pcard-cat">Pédicure</p>
-          <h3 class="pcard-name">Semi-Permanent<br>Orteils</h3>
-          <p class="pcard-desc">Semi-permanent sur les ongles des pieds pour un résultat soigné et durable tout l'été.</p>
-          <div class="pcard-price">30€</div>
-          <p class="pcard-note">+ Option Nail Art : +5€</p>
-        </div>
-      </div>
-
+    <ul class="nav-links">
+      <li><a href="#prestations">Prestations</a></li>
+      <li><a href="#galerie">Galerie</a></li>
+      <li><a href="#zone">Zone</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="https://iarabeauty.com/fr/pro/a.nailspro" target="_blank" rel="noopener" class="nav-book">Réserver</a>
+    <div class="nav-burger" id="burger">
+      <span></span><span></span><span></span>
     </div>
+  </nav>
 
-    <!-- Dépose -->
-    <div class="depose r r2">
-      <div class="depose-left">
-        <div class="depose-name">Dépose</div>
-        <div class="depose-note">Offerte si une repose est effectuée dans la foulée</div>
-      </div>
-      <div class="depose-price">10€</div>
-    </div>
+  <!-- ══ MOBILE MENU ═════════════════════════════════ -->
+  <div id="mob-menu">
+    <button class="mob-close" id="mob-close">✕</button>
+    <a href="#prestations" onclick="closeMob()">Prestations</a>
+    <a href="#galerie" onclick="closeMob()">Galerie</a>
+    <a href="#zone" onclick="closeMob()">Zone</a>
+    <a href="#contact" onclick="closeMob()">Contact</a>
+    <a href="https://iarabeauty.com/fr/pro/a.nailspro" target="_blank" rel="noopener" class="mob-cta"
+      onclick="closeMob()">Réserver</a>
   </div>
-</section>
 
-<!-- ══ GALERIE ══════════════════════════════════════ -->
-<section id="galerie" class="section">
-  <div class="galerie-inner">
-    <span class="s-label r">Inspirations</span>
-    <h2 class="s-title r r1">Réalisations</h2>
-    <div class="s-rule r r2"></div>
+  <!-- ══ HERO ════════════════════════════════════════ -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-inner">
 
-    <div class="gal-grid r r3">
-
-      <!-- Col 1 row 1–2 tall -->
-      <div class="g-item g-tall">
-        <img src="uploads/res/img_web/amande_rose.jpg" alt="Ongles amande rosé milky">
+      <div class="hero-logo-box">
+        <span class="hero-logo-name">A'Nails</span>
+        <span class="hero-logo-sub">Nail Tech</span>
       </div>
 
-      <!-- Col 2 row 1 -->
-      <div class="g-item">
-        <video src="uploads/res/vid_web/avant_apres_milky_pink.mp4" autoplay muted loop playsinline></video>
-        <span class="g-badge">Avant · Après</span>
-      </div>
-
-      <!-- Col 3 row 1 -->
-      <div class="g-item">
-        <img src="uploads/res/img_web/nail_art_arriere.jpg" alt="Nail art vue arrière">
-      </div>
-
-      <!-- Col 2 row 2 -->
-      <div class="g-item">
-        <video src="uploads/res/vid_web/milky_pink_gel_x.mp4" autoplay muted loop playsinline></video>
-        <span class="g-badge">Milky Pink Gel-X</span>
-      </div>
-
-      <!-- Col 3 row 2 -->
-      <div class="g-item">
-        <img src="uploads/res/img_web/french.jpg" alt="Pose française">
-      </div>
-
-      <!-- Row 3 — wide video + photo -->
-      <div class="g-item g-wide">
-        <video src="uploads/res/vid_web/pedicure_french.mp4" autoplay muted loop playsinline></video>
-        <span class="g-badge">Pédicure French</span>
-      </div>
-
-      <div class="g-item">
-        <img src="uploads/res/img_web/photo_deco.jpg" alt="Nail art décoratif">
-      </div>
-
-      <!-- Row 4 -->
-      <div class="g-item">
-        <img src="uploads/res/img_web/materiel.jpg" alt="Matériel professionnel">
-      </div>
-
-      <div class="g-item">
-        <img src="uploads/res/img_web/nail_art_avant.jpg" alt="Nail art vue avant">
-      </div>
-
+      <p class="hero-eyebrow">Prothésiste Ongulaire Certifiée</p>
+      <div class="hero-rule"></div>
+      <h1 class="hero-title">L'art des ongles,<br>à votre domicile</h1>
+      <p class="hero-location">Montpellier · Le Crès · Alentours</p>
+      <a href="https://iarabeauty.com/fr/pro/a.nailspro" target="_blank" rel="noopener" class="hero-cta">
+        Prendre rendez-vous
+      </a>
     </div>
-  </div>
-</section>
+    <div class="hero-scroll" aria-hidden="true">
+      <div class="hero-scroll-line"></div>
+    </div>
+  </section>
 
-<!-- ══ ZONE ═════════════════════════════════════════ -->
-<section id="zone" class="section">
-  <div class="zone-inner">
-    <div>
-      <span class="s-label r">Service à domicile</span>
-      <h2 class="s-title r r1">Zone<br>d'intervention</h2>
+  <!-- ══ PRESTATIONS ══════════════════════════════════ -->
+  <section id="prestations" class="section">
+    <div class="prest-inner">
+      <span class="s-label r">Nos services</span>
+      <h2 class="s-title r r1">Prestations<br>&amp; Tarifs</h2>
       <div class="s-rule r r2"></div>
-      <p class="r r3" style="font-size:13px;font-weight:300;color:rgba(250,248,244,.48);line-height:1.85;max-width:380px;">
-        Je me déplace directement chez vous dans le secteur du Crès et ses alentours — tout le matériel est amené sur place, aucun déplacement de votre côté.
+
+      <div class="prest-grid">
+
+        <!-- Pose Américaine / Gel-X -->
+        <div class="pcard r r1">
+          <div class="pcard-img-wrap">
+            <img src="uploads/res/img_web/gel_x.jpg" alt="Pose américaine Gel-X" class="pcard-img">
+          </div>
+          <div class="pcard-body">
+            <p class="pcard-cat">Manucure</p>
+            <h3 class="pcard-name">Pose Américaine<br>Gel-X</h3>
+            <p class="pcard-desc">Pose de capsules en gel pour un effet naturel et durable. Idéal pour allonger ou
+              renforcer les ongles.</p>
+            <div class="pcard-price">40€</div>
+            <p class="pcard-note">+ Option Nail Art : +5€</p>
+          </div>
+        </div>
+
+        <!-- Semi-permanent -->
+        <div class="pcard r r2">
+          <div class="pcard-img-wrap">
+            <img src="uploads/res/img_web/pot_de_gel.jpg" alt="Semi-permanent gel naturel" class="pcard-img"
+              style="object-position: center 30%;">
+          </div>
+          <div class="pcard-body">
+            <p class="pcard-cat">Manucure</p>
+            <h3 class="pcard-name">Semi-Permanent<br>Gel naturel</h3>
+            <p class="pcard-desc">Vernis semi-permanent ou gel de couleur sur ongles naturels. Tenue jusqu'à 3 semaines,
+              finition parfaite.</p>
+            <div class="pcard-price">25€</div>
+            <p class="pcard-note">+ Option Nail Art : +5€</p>
+          </div>
+        </div>
+
+        <!-- Nail Art -->
+        <div class="pcard pcard-dark r r3">
+          <div class="pcard-img-wrap">
+            <img src="uploads/res/img_web/nail_art_avant.jpg" alt="Nail art" class="pcard-img">
+          </div>
+          <div class="pcard-body">
+            <p class="pcard-cat">Option</p>
+            <h3 class="pcard-name">Nail Art</h3>
+            <p class="pcard-desc">Dégradés, motifs floraux, pierres, lignes graphiques… laissez libre cours à votre
+              créativité.</p>
+            <div class="pcard-price">+5€</div>
+            <p class="pcard-note">À ajouter sur toute prestation</p>
+          </div>
+        </div>
+
+        <!-- Pédicure -->
+        <div class="pcard r r4">
+          <div class="pcard-img-wrap">
+            <img src="uploads/res/img_web/pédicure_french.JPG" alt="Pédicure semi-permanent french" class="pcard-img"
+              style="object-position: center 15%;">
+          </div>
+          <div class="pcard-body">
+            <p class="pcard-cat">Pédicure</p>
+            <h3 class="pcard-name">Semi-Permanent<br>Orteils</h3>
+            <p class="pcard-desc">Semi-permanent sur les ongles des pieds pour un résultat soigné et durable tout l'été.
+            </p>
+            <div class="pcard-price">30€</div>
+            <p class="pcard-note">+ Option Nail Art : +5€</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Dépose -->
+      <div class="depose r r2">
+        <div class="depose-left">
+          <div class="depose-name">Dépose</div>
+          <div class="depose-note">Offerte si une repose est effectuée dans la foulée</div>
+        </div>
+        <div class="depose-price">10€</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ GALERIE ══════════════════════════════════════ -->
+  <section id="galerie" class="section">
+    <div class="galerie-inner">
+      <span class="s-label r">Inspirations</span>
+      <h2 class="s-title r r1">Réalisations</h2>
+      <div class="s-rule r r2"></div>
+
+      <div class="gal-grid r r3">
+
+        <!-- Col 1 row 1–2 tall -->
+        <div class="g-item g-tall">
+          <img src="uploads/res/img_web/amande_rose.jpg" alt="Ongles amande rosé milky">
+        </div>
+
+        <!-- Col 2 row 1 -->
+        <div class="g-item">
+          <video src="uploads/res/vid_web/avant_apres_milky_pink.mp4" autoplay muted loop playsinline></video>
+          <span class="g-badge">Avant · Après</span>
+        </div>
+
+        <!-- Col 3 row 1 -->
+        <div class="g-item">
+          <img src="uploads/res/img_web/nail_art_arriere.jpg" alt="Nail art vue arrière">
+        </div>
+
+        <!-- Col 2 row 2 -->
+        <div class="g-item">
+          <video src="uploads/res/vid_web/milky_pink_gel_x.mp4" autoplay muted loop playsinline></video>
+          <span class="g-badge">Milky Pink Gel-X</span>
+        </div>
+
+        <!-- Col 3 row 2 -->
+        <div class="g-item">
+          <img src="uploads/res/img_web/french.jpg" alt="Pose française">
+        </div>
+
+        <!-- Row 3 — wide video + photo -->
+        <div class="g-item g-wide">
+          <video src="uploads/res/vid_web/pedicure_french.mp4" autoplay muted loop playsinline></video>
+          <span class="g-badge">Pédicure French</span>
+        </div>
+
+        <div class="g-item">
+          <img src="uploads/res/img_web/photo_deco.jpg" alt="Nail art décoratif">
+        </div>
+
+        <!-- Row 4 -->
+        <div class="g-item">
+          <img src="uploads/res/img_web/materiel.jpg" alt="Matériel professionnel">
+        </div>
+
+        <div class="g-item">
+          <img src="uploads/res/img_web/nail_art_avant.jpg" alt="Nail art vue avant">
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ ZONE ═════════════════════════════════════════ -->
+  <section id="zone" class="section">
+    <div class="zone-inner">
+      <div>
+        <span class="s-label r">Service à domicile</span>
+        <h2 class="s-title r r1">Zone<br>d'intervention</h2>
+        <div class="s-rule r r2"></div>
+        <p class="r r3"
+          style="font-size:13px;font-weight:300;color:rgba(250,248,244,.48);line-height:1.85;max-width:380px;">
+          Je me déplace directement chez vous dans le secteur du Crès et ses alentours — tout le matériel est amené sur
+          place, aucun déplacement de votre côté.
+        </p>
+        <div class="zone-list">
+          <div class="zone-item r">Le Crès</div>
+          <div class="zone-item r r1">Montpellier</div>
+          <div class="zone-item r r2">Vendargues</div>
+          <div class="zone-item r r1">Castelnau-le-Lez</div>
+          <div class="zone-item r r2">Saint-Aunès</div>
+          <div class="zone-item r r1">Teyran</div>
+          <div class="zone-item r r2">Clapiers</div>
+          <div class="zone-item r r1">Mauguio</div>
+          <div class="zone-item r r2">Jacou</div>
+        </div>
+      </div>
+
+      <div class="zone-img-wrap r r3">
+        <img src="uploads/res/img_web/photo_deco.jpg" alt="Nail art détail" class="zone-img">
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ RÉSERVATION ══════════════════════════════════ -->
+  <section id="reservation">
+    <div class="resa-inner">
+      <p class="resa-eyebrow r">Disponible pour vous</p>
+      <h2 class="resa-title r r1">Prenez<br>rendez-vous</h2>
+      <p class="resa-sub r r2">
+        Réservez en ligne en quelques clics via notre plateforme partenaire.<br>
+        Choisissez le créneau qui vous convient, je viens chez vous.
       </p>
-      <div class="zone-list">
-        <div class="zone-item r">Le Crès</div>
-        <div class="zone-item r r1">Montpellier</div>
-        <div class="zone-item r r2">Vendargues</div>
-        <div class="zone-item r r1">Castelnau-le-Lez</div>
-        <div class="zone-item r r2">Saint-Aunès</div>
-        <div class="zone-item r r1">Teyran</div>
-        <div class="zone-item r r2">Clapiers</div>
-        <div class="zone-item r r1">Mauguio</div>
-        <div class="zone-item r r2">Jacou</div>
-      </div>
-    </div>
-
-    <div class="zone-img-wrap r r3">
-      <img src="uploads/res/img_web/photo_deco.jpg" alt="Nail art détail" class="zone-img">
-    </div>
-  </div>
-</section>
-
-<!-- ══ RÉSERVATION ══════════════════════════════════ -->
-<section id="reservation">
-  <div class="resa-inner">
-    <p class="resa-eyebrow r">Disponible pour vous</p>
-    <h2 class="resa-title r r1">Prenez<br>rendez-vous</h2>
-    <p class="resa-sub r r2">
-      Réservez en ligne en quelques clics via notre plateforme partenaire.<br>
-      Choisissez le créneau qui vous convient, je viens chez vous.
-    </p>
-    <a href="https://iarabeauty.com/fr/pro/a.nailspro" target="_blank" rel="noopener" class="btn-resa r r3">
-      Réserver maintenant
-    </a>
-  </div>
-</section>
-
-<!-- ══ CONTACT ══════════════════════════════════════ -->
-<section id="contact" class="section">
-  <div class="contact-inner">
-    <span class="s-label r">Nous retrouver</span>
-    <h2 class="s-title r r1">Contact</h2>
-    <div class="s-rule r r2" style="margin-left:auto;margin-right:auto;"></div>
-
-    <div class="contact-links">
-      <a href="https://www.instagram.com/a.nailspro" target="_blank" rel="noopener" class="clink r r1">
-        <div class="clink-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="2" y="2" width="20" height="20" rx="5"></rect>
-            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-          </svg>
-        </div>
-        <span class="clink-label">Instagram</span>
-        <span class="clink-val">@a.nailspro</span>
-      </a>
-
-      <a href="https://www.facebook.com/people/Ana%C3%AFs-Cassagnau/61563911413258/?locale=fr_FR" target="_blank" rel="noopener" class="clink r r2">
-        <div class="clink-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-          </svg>
-        </div>
-        <span class="clink-label">Facebook</span>
-        <span class="clink-val">Anaïs Cassagnau</span>
-      </a>
-
-      <a href="mailto:proana.nails@gmail.com" class="clink r r3">
-        <div class="clink-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-            <polyline points="22,6 12,13 2,6"></polyline>
-          </svg>
-        </div>
-        <span class="clink-label">Email</span>
-        <span class="clink-val">proana.nails@gmail.com</span>
+      <a href="https://iarabeauty.com/fr/pro/a.nailspro" target="_blank" rel="noopener" class="btn-resa r r3">
+        Réserver maintenant
       </a>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ══ FOOTER ═══════════════════════════════════════ -->
-<footer>
-  <img src="uploads/res/img_web/logo.jpg" alt="A'Nails" class="footer-logo">
-  <div class="footer-copy">© 2026 · A'Nails · Prothésiste Ongulaire · Montpellier &amp; Alentours</div>
-</footer>
+  <!-- ══ CONTACT ══════════════════════════════════════ -->
+  <section id="contact" class="section">
+    <div class="contact-inner">
+      <span class="s-label r">Nous retrouver</span>
+      <h2 class="s-title r r1">Contact</h2>
+      <div class="s-rule r r2" style="margin-left:auto;margin-right:auto;"></div>
 
-<!-- ══ TWEAKS ════════════════════════════════════════ -->
-<div id="tweaks">
-  <div class="tw-hd">
-    <span class="tw-hd-title">Tweaks</span>
-    <button class="tw-x" id="tw-x">✕</button>
-  </div>
-  <div class="tw-body">
-    <!-- Palette -->
-    <div>
-      <p class="tw-gl">Couleur d'accent</p>
-      <div class="tw-swatches">
-        <div class="tw-sw on" data-pal="gold"
-             style="background:linear-gradient(135deg,#C4A46B,#DEC891)" title="Or chaud"
-             onclick="setPal('gold',this)"></div>
-        <div class="tw-sw" data-pal="rose"
-             style="background:linear-gradient(135deg,#C4847A,#DBAAA5)" title="Or rosé"
-             onclick="setPal('rose',this)"></div>
-        <div class="tw-sw" data-pal="silver"
-             style="background:linear-gradient(135deg,#9EABB5,#C4CDD3)" title="Argent"
-             onclick="setPal('silver',this)"></div>
+      <div class="contact-links">
+        <a href="https://www.instagram.com/a.nailspro" target="_blank" rel="noopener" class="clink r r1">
+          <div class="clink-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </div>
+          <span class="clink-label">Instagram</span>
+          <span class="clink-val">@a.nailspro</span>
+        </a>
+
+        <a href="https://www.facebook.com/people/Ana%C3%AFs-Cassagnau/61563911413258/?locale=fr_FR" target="_blank"
+          rel="noopener" class="clink r r2">
+          <div class="clink-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+            </svg>
+          </div>
+          <span class="clink-label">Facebook</span>
+          <span class="clink-val">Anaïs Cassagnau</span>
+        </a>
+
+        <a href="mailto:proana.nails@gmail.com" class="clink r r3">
+          <div class="clink-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+          </div>
+          <span class="clink-label">Email</span>
+          <span class="clink-val">proana.nails@gmail.com</span>
+        </a>
       </div>
     </div>
-    <!-- Hero bg -->
-    <div>
-      <p class="tw-gl">Fond hero</p>
-      <div class="tw-radios">
-        <label class="tw-radio on" id="rb-photo">
-          <div class="tw-dot"></div>Photo amande rosé
-        </label>
-        <label class="tw-radio" id="rb-noir">
-          <div class="tw-dot"></div>Noir pur
-        </label>
-      </div>
+  </section>
+
+  <!-- ══ FOOTER ═══════════════════════════════════════ -->
+  <footer>
+    <img src="uploads/res/img_web/logo.jpg" alt="A'Nails" class="footer-logo">
+    <div class="footer-copy">© 2026 · A'Nails · Prothésiste Ongulaire · Montpellier &amp; Alentours</div>
+  </footer>
+
+  <!-- ══ TWEAKS ════════════════════════════════════════ -->
+  <div id="tweaks">
+    <div class="tw-hd">
+      <span class="tw-hd-title">Tweaks</span>
+      <button class="tw-x" id="tw-x">✕</button>
     </div>
-    <!-- Gallery columns -->
-    <div>
-      <p class="tw-gl">Colonnes galerie</p>
-      <div class="tw-radios">
-        <label class="tw-radio on" id="rb-3col">
-          <div class="tw-dot"></div>3 colonnes
-        </label>
-        <label class="tw-radio" id="rb-2col">
-          <div class="tw-dot"></div>2 colonnes
-        </label>
+    <div class="tw-body">
+      <!-- Palette -->
+      <div>
+        <p class="tw-gl">Couleur d'accent</p>
+        <div class="tw-swatches">
+          <div class="tw-sw on" data-pal="gold" style="background:linear-gradient(135deg,#C4A46B,#DEC891)"
+            title="Or chaud" onclick="setPal('gold',this)"></div>
+          <div class="tw-sw" data-pal="rose" style="background:linear-gradient(135deg,#C4847A,#DBAAA5)" title="Or rosé"
+            onclick="setPal('rose',this)"></div>
+          <div class="tw-sw" data-pal="silver" style="background:linear-gradient(135deg,#9EABB5,#C4CDD3)" title="Argent"
+            onclick="setPal('silver',this)"></div>
+        </div>
+      </div>
+      <!-- Hero bg -->
+      <div>
+        <p class="tw-gl">Fond hero</p>
+        <div class="tw-radios">
+          <label class="tw-radio on" id="rb-photo">
+            <div class="tw-dot"></div>Photo amande rosé
+          </label>
+          <label class="tw-radio" id="rb-noir">
+            <div class="tw-dot"></div>Noir pur
+          </label>
+        </div>
+      </div>
+      <!-- Gallery columns -->
+      <div>
+        <p class="tw-gl">Colonnes galerie</p>
+        <div class="tw-radios">
+          <label class="tw-radio on" id="rb-3col">
+            <div class="tw-dot"></div>3 colonnes
+          </label>
+          <label class="tw-radio" id="rb-2col">
+            <div class="tw-dot"></div>2 colonnes
+          </label>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<script>
-  /* NAV */
-  const nav = document.getElementById('nav');
-  window.addEventListener('scroll', () => {
-    nav.classList.toggle('solid', window.scrollY > 60);
-  }, { passive: true });
+  <script>
+    /* NAV */
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('solid', window.scrollY > 60);
+    }, { passive: true });
 
-  /* MOBILE MENU */
-  document.getElementById('burger').addEventListener('click', () => {
-    document.getElementById('mob-menu').classList.add('open');
-  });
-  document.getElementById('mob-close').addEventListener('click', closeMob);
-  function closeMob() { document.getElementById('mob-menu').classList.remove('open'); }
+    /* MOBILE MENU */
+    document.getElementById('burger').addEventListener('click', () => {
+      document.getElementById('mob-menu').classList.add('open');
+    });
+    document.getElementById('mob-close').addEventListener('click', closeMob);
+    function closeMob() { document.getElementById('mob-menu').classList.remove('open'); }
 
-  /* SCROLL REVEAL */
-  const ro = new IntersectionObserver(es => {
-    es.forEach(e => { if (e.isIntersecting) e.target.classList.add('on'); });
-  }, { threshold: 0.08 });
-  document.querySelectorAll('.r').forEach(el => ro.observe(el));
+    /* SCROLL REVEAL */
+    const ro = new IntersectionObserver(es => {
+      es.forEach(e => { if (e.isIntersecting) e.target.classList.add('on'); });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.r').forEach(el => ro.observe(el));
 
-  /* TWEAKS PROTOCOL */
-  const tweaksEl = document.getElementById('tweaks');
-  window.addEventListener('message', e => {
-    if (!e.data) return;
-    if (e.data.type === '__activate_edit_mode')   tweaksEl.style.display = 'block';
-    if (e.data.type === '__deactivate_edit_mode') tweaksEl.style.display = 'none';
-  });
-  window.parent.postMessage({ type: '__edit_mode_available' }, '*');
-  document.getElementById('tw-x').addEventListener('click', () => {
-    tweaksEl.style.display = 'none';
-    window.parent.postMessage({ type: '__edit_mode_dismissed' }, '*');
-  });
+    /* TWEAKS PROTOCOL */
+    const tweaksEl = document.getElementById('tweaks');
+    window.addEventListener('message', e => {
+      if (!e.data) return;
+      if (e.data.type === '__activate_edit_mode') tweaksEl.style.display = 'block';
+      if (e.data.type === '__deactivate_edit_mode') tweaksEl.style.display = 'none';
+    });
+    window.parent.postMessage({ type: '__edit_mode_available' }, '*');
+    document.getElementById('tw-x').addEventListener('click', () => {
+      tweaksEl.style.display = 'none';
+      window.parent.postMessage({ type: '__edit_mode_dismissed' }, '*');
+    });
 
-  /* Palette tweak */
-  const pals = {
-    gold:   ['#C4A46B','#DEC891','#9B7D45'],
-    rose:   ['#C4847A','#DBAAA5','#9B5D56'],
-    silver: ['#9EABB5','#C4CDD3','#6A7C86'],
-  };
-  function setPal(name, el) {
-    document.querySelectorAll('.tw-sw').forEach(s => s.classList.remove('on'));
-    el.classList.add('on');
-    const [g, gl, gd] = pals[name];
-    document.documentElement.style.setProperty('--gold',    g);
-    document.documentElement.style.setProperty('--gold-lt', gl);
-    document.documentElement.style.setProperty('--gold-dk', gd);
-    window.parent.postMessage({ type:'__edit_mode_set_keys', edits:{ palette: name } }, '*');
-  }
+    /* Palette tweak */
+    const pals = {
+      gold: ['#C4A46B', '#DEC891', '#9B7D45'],
+      rose: ['#C4847A', '#DBAAA5', '#9B5D56'],
+      silver: ['#9EABB5', '#C4CDD3', '#6A7C86'],
+    };
+    function setPal(name, el) {
+      document.querySelectorAll('.tw-sw').forEach(s => s.classList.remove('on'));
+      el.classList.add('on');
+      const [g, gl, gd] = pals[name];
+      document.documentElement.style.setProperty('--gold', g);
+      document.documentElement.style.setProperty('--gold-lt', gl);
+      document.documentElement.style.setProperty('--gold-dk', gd);
+      window.parent.postMessage({ type: '__edit_mode_set_keys', edits: { palette: name } }, '*');
+    }
 
-  /* Hero bg tweak */
-  function setRadio(group, el) {
-    group.forEach(r => r.classList.remove('on'));
-    el.classList.add('on');
-  }
-  const rbPhoto = document.getElementById('rb-photo');
-  const rbNoir  = document.getElementById('rb-noir');
-  const heroBg  = document.querySelector('.hero-bg');
-  const heroOv  = document.querySelector('.hero-overlay');
+    /* Hero bg tweak */
+    function setRadio(group, el) {
+      group.forEach(r => r.classList.remove('on'));
+      el.classList.add('on');
+    }
+    const rbPhoto = document.getElementById('rb-photo');
+    const rbNoir = document.getElementById('rb-noir');
+    const heroBg = document.querySelector('.hero-bg');
+    const heroOv = document.querySelector('.hero-overlay');
 
-  rbPhoto.addEventListener('click', () => {
-    setRadio([rbPhoto, rbNoir], rbPhoto);
-    heroBg.style.backgroundImage = "url('uploads/res/img_web/amande_rose.jpg')";
-    heroOv.style.background = '';
-    window.parent.postMessage({ type:'__edit_mode_set_keys', edits:{ heroBg:'photo' } }, '*');
-  });
-  rbNoir.addEventListener('click', () => {
-    setRadio([rbPhoto, rbNoir], rbNoir);
-    heroBg.style.backgroundImage = 'none';
-    heroOv.style.background = 'rgba(8,8,8,1)';
-    window.parent.postMessage({ type:'__edit_mode_set_keys', edits:{ heroBg:'noir' } }, '*');
-  });
+    rbPhoto.addEventListener('click', () => {
+      setRadio([rbPhoto, rbNoir], rbPhoto);
+      heroBg.style.backgroundImage = "url('uploads/res/img_web/amande_rose.jpg')";
+      heroOv.style.background = '';
+      window.parent.postMessage({ type: '__edit_mode_set_keys', edits: { heroBg: 'photo' } }, '*');
+    });
+    rbNoir.addEventListener('click', () => {
+      setRadio([rbPhoto, rbNoir], rbNoir);
+      heroBg.style.backgroundImage = 'none';
+      heroOv.style.background = 'rgba(8,8,8,1)';
+      window.parent.postMessage({ type: '__edit_mode_set_keys', edits: { heroBg: 'noir' } }, '*');
+    });
 
-  /* Gallery columns tweak */
-  const rb3 = document.getElementById('rb-3col');
-  const rb2 = document.getElementById('rb-2col');
-  const galGrid = document.querySelector('.gal-grid');
-  rb3.addEventListener('click', () => {
-    setRadio([rb3, rb2], rb3);
-    galGrid.style.gridTemplateColumns = 'repeat(3, 1fr)';
-    window.parent.postMessage({ type:'__edit_mode_set_keys', edits:{ galCols: 3 } }, '*');
-  });
-  rb2.addEventListener('click', () => {
-    setRadio([rb3, rb2], rb2);
-    galGrid.style.gridTemplateColumns = 'repeat(2, 1fr)';
-    window.parent.postMessage({ type:'__edit_mode_set_keys', edits:{ galCols: 2 } }, '*');
-  });
-</script>
+    /* Gallery columns tweak */
+    const rb3 = document.getElementById('rb-3col');
+    const rb2 = document.getElementById('rb-2col');
+    const galGrid = document.querySelector('.gal-grid');
+    rb3.addEventListener('click', () => {
+      setRadio([rb3, rb2], rb3);
+      galGrid.style.gridTemplateColumns = 'repeat(3, 1fr)';
+      window.parent.postMessage({ type: '__edit_mode_set_keys', edits: { galCols: 3 } }, '*');
+    });
+    rb2.addEventListener('click', () => {
+      setRadio([rb3, rb2], rb2);
+      galGrid.style.gridTemplateColumns = 'repeat(2, 1fr)';
+      window.parent.postMessage({ type: '__edit_mode_set_keys', edits: { galCols: 2 } }, '*');
+    });
+  </script>
 
 </body>
+
 </html>
