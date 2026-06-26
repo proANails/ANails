@@ -595,6 +595,64 @@
       color: var(--text);
     }
 
+    /* ── EXTENSIONS DE CILS ──────────────────── */
+    .cils-header {
+      margin-top: 88px;
+      text-align: center;
+    }
+
+    .cils-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 34px;
+      font-weight: 400;
+      color: var(--text);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 15px;
+    }
+
+    .cils-grid {
+      grid-template-columns: repeat(2, 1fr);
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 40px;
+    }
+
+    .cils-list {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 20px;
+      padding: 0 12px;
+    }
+
+    .cils-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 13px;
+      color: var(--text-mid);
+      border-bottom: 1px dashed var(--border);
+      padding-bottom: 8px;
+    }
+
+    .cils-row strong {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 24px;
+      font-weight: 300;
+      color: var(--text);
+    }
+
+    .depose-desc {
+      font-size: 12.5px;
+      font-weight: 300;
+      color: var(--text-mid);
+      margin-top: 4px;
+    }
+
     .depose {
       background: var(--card-bg);
       border: 1px solid var(--border);
@@ -906,7 +964,8 @@
     }
 
     @media (max-width: 900px) {
-      .pack-grid {
+      .pack-grid,
+      .cils-grid {
         grid-template-columns: 1fr;
         max-width: 440px;
         margin-left: auto;
@@ -1149,9 +1208,59 @@
       <!-- Dépose -->
       <div class="depose r r2">
         <div class="depose-left">
-          <div class="depose-name">Dépose</div>
+          <div class="depose-name">Dépose Ongles</div>
         </div>
         <div class="depose-price">10€</div>
+      </div>
+
+      <!-- ── EXTENSIONS DE CILS ──────────────────────── -->
+      <div class="cils-header r">
+        <h3 class="cils-title">Extensions de Cils</h3>
+        <div class="wavy-line"></div>
+      </div>
+
+      <div class="prest-grid cils-grid r r1">
+
+        <!-- Pose complète -->
+        <div class="pcard">
+          <div class="pcard-img-wrap">
+            <img src="assets/images/extension-cils.jpg" alt="Pose complète Cil à Cil" class="pcard-img">
+          </div>
+          <div class="pcard-body">
+            <p class="pcard-cat">Regard</p>
+            <h3 class="pcard-name">Pose Complète<br>Cil à Cil</h3>
+            <div class="wavy-line"></div>
+            <p class="pcard-desc">Effet naturel élégant</p>
+            <div class="pcard-price">60€</div>
+          </div>
+        </div>
+
+        <!-- Remplissages -->
+        <div class="pcard">
+          <div class="pcard-img-wrap">
+            <img src="assets/images/remplissage-cils.jpg" alt="Remplissage Extensions de Cils" class="pcard-img">
+          </div>
+          <div class="pcard-body">
+            <p class="pcard-cat">Entretien</p>
+            <h3 class="pcard-name">Remplissages</h3>
+            <div class="wavy-line"></div>
+            <div class="cils-list">
+              <div class="cils-row"><span>15 jours</span><strong>30€</strong></div>
+              <div class="cils-row"><span>3 semaines maximum</span><strong>45€</strong></div>
+              <div class="cils-row"><span>1 mois</span><strong>50€</strong></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Dépose Cils -->
+      <div class="depose r r2">
+        <div class="depose-left">
+          <div class="depose-name">Dépose Cils</div>
+          <div class="depose-desc">Retrait professionnel et en douceur des extensions</div>
+        </div>
+        <div class="depose-price">20€</div>
       </div>
     </div>
   </section>
