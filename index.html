@@ -1107,15 +1107,15 @@
         <!-- French & Nail Art -->
         <div class="pcard r r3">
           <div class="pcard-img-wrap card-switcher" id="nailart-switcher">
-            <img src="assets/images/nail_art_avant.jpg" alt="Nail art" class="pcard-img card-img-slide active">
-            <img src="assets/images/french-classique.jpg" alt="French classique" class="pcard-img card-img-slide">
-            <button class="switcher-arrow left" onclick="switchCardImg(0)" aria-label="Voir Nail Art">‹</button>
-            <button class="switcher-arrow right" onclick="switchCardImg(1)" aria-label="Voir French Classique">›</button>
+            <img src="assets/images/french-classique.jpg" alt="French classique" class="pcard-img card-img-slide active">
+            <img src="assets/images/nail_art_avant.jpg" alt="Nail art" class="pcard-img card-img-slide">
+            <button class="switcher-arrow left" onclick="switchCardImg(0)" aria-label="Voir French">‹</button>
+            <button class="switcher-arrow right" onclick="switchCardImg(1)" aria-label="Voir Nail Art">›</button>
             <div class="switcher-controls">
-              <button class="switcher-dot active" onclick="switchCardImg(0)" aria-label="Voir Nail Art"></button>
-              <button class="switcher-dot" onclick="switchCardImg(1)" aria-label="Voir French Classique"></button>
+              <button class="switcher-dot active" onclick="switchCardImg(0)" aria-label="Voir French"></button>
+              <button class="switcher-dot" onclick="switchCardImg(1)" aria-label="Voir Nail Art"></button>
             </div>
-            <span class="switcher-label" id="switcher-txt">Nail Art</span>
+            <span class="switcher-label" id="switcher-txt">French</span>
           </div>
           <div class="pcard-body">
             <p class="pcard-cat">Option</p>
@@ -1440,21 +1440,6 @@
       window.parent.postMessage({ type: '__edit_mode_set_keys', edits: { heroBg: 'noir' } }, '*');
     });
 
-    /* Gallery columns tweak */
-    const rb3 = document.getElementById('rb-3col');
-    const rb2 = document.getElementById('rb-2col');
-    const galGrid = document.querySelector('.gal-grid');
-    rb3.addEventListener('click', () => {
-      setRadio([rb3, rb2], rb3);
-      galGrid.style.gridTemplateColumns = 'repeat(3, 1fr)';
-      window.parent.postMessage({ type: '__edit_mode_set_keys', edits: { galCols: 3 } }, '*');
-    });
-    rb2.addEventListener('click', () => {
-      setRadio([rb3, rb2], rb2);
-      galGrid.style.gridTemplateColumns = 'repeat(2, 1fr)';
-      window.parent.postMessage({ type: '__edit_mode_set_keys', edits: { galCols: 2 } }, '*');
-    });
-
     /* CARD IMAGE SWITCHER */
     function switchCardImg(idx) {
       const wrap = document.getElementById('nailart-switcher');
@@ -1464,7 +1449,7 @@
       const txt = document.getElementById('switcher-txt');
       imgs.forEach((img, i) => img.classList.toggle('active', i === idx));
       dots.forEach((dot, i) => dot.classList.toggle('active', i === idx));
-      if (txt) txt.textContent = idx === 0 ? 'Nail Art' : 'French Classique';
+      if (txt) txt.textContent = idx === 0 ? 'French' : 'Nail Art';
     }
   </script>
 
