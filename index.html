@@ -415,6 +415,40 @@
       z-index: 1;
     }
 
+    .switcher-arrow {
+      position: absolute;
+      top: 0;
+      width: 45%;
+      height: 100%;
+      background: transparent;
+      border: none;
+      z-index: 3;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      font-size: 32px;
+      color: rgba(255, 255, 255, 0.9);
+      text-shadow: 0 1px 6px rgba(0,0,0,0.5);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      padding: 0 14px;
+      user-select: none;
+    }
+
+    .card-switcher:hover .switcher-arrow {
+      opacity: 1;
+    }
+
+    .switcher-arrow.left {
+      left: 0;
+      justify-content: flex-start;
+    }
+
+    .switcher-arrow.right {
+      right: 0;
+      justify-content: flex-end;
+    }
+
     .switcher-controls {
       position: absolute;
       bottom: 12px;
@@ -422,7 +456,7 @@
       transform: translateX(-50%);
       display: flex;
       gap: 8px;
-      z-index: 2;
+      z-index: 5;
       background: rgba(255, 255, 255, 0.65);
       backdrop-filter: blur(4px);
       padding: 5px 10px;
@@ -458,7 +492,7 @@
       letter-spacing: 0.1em;
       padding: 4px 8px;
       border-radius: 4px;
-      z-index: 2;
+      z-index: 5;
       font-weight: 500;
       box-shadow: 0 2px 8px rgba(0,0,0,0.06);
       transition: all 0.3s ease;
@@ -1030,6 +1064,8 @@
           <div class="pcard-img-wrap card-switcher" id="nailart-switcher">
             <img src="assets/images/nail_art_avant.jpg" alt="Nail art" class="pcard-img card-img-slide active">
             <img src="assets/images/french-classique.jpg" alt="French classique" class="pcard-img card-img-slide">
+            <button class="switcher-arrow left" onclick="switchCardImg(0)" aria-label="Voir Nail Art">‹</button>
+            <button class="switcher-arrow right" onclick="switchCardImg(1)" aria-label="Voir French Classique">›</button>
             <div class="switcher-controls">
               <button class="switcher-dot active" onclick="switchCardImg(0)" aria-label="Voir Nail Art"></button>
               <button class="switcher-dot" onclick="switchCardImg(1)" aria-label="Voir French Classique"></button>
