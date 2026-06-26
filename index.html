@@ -559,6 +559,42 @@
       margin-top: 6px;
     }
 
+    /* ── PACKS / FORFAITS ────────────────────── */
+    .pack-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin-top: 64px;
+    }
+
+    .pack-quote {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 17px;
+      color: var(--text);
+      margin-bottom: 16px;
+      line-height: 1.35;
+      padding: 0 6px;
+    }
+
+    .pack-list {
+      font-size: 12.5px;
+      font-weight: 300;
+      color: var(--text-mid);
+      line-height: 1.8;
+      flex: 1;
+      margin-bottom: 24px;
+      text-align: left;
+      padding: 0 10px;
+    }
+
+    .pack-list em {
+      display: block;
+      margin-top: 6px;
+      font-size: 11px;
+      color: var(--text);
+    }
+
     .depose {
       background: var(--card-bg);
       border: 1px solid var(--border);
@@ -869,6 +905,15 @@
       }
     }
 
+    @media (max-width: 900px) {
+      .pack-grid {
+        grid-template-columns: 1fr;
+        max-width: 440px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
     @media (max-width: 768px) {
       #nav {
         padding: 0 20px;
@@ -974,6 +1019,7 @@
     </a>
     <ul class="nav-links">
       <li><a href="#prestations">Prestations</a></li>
+      <li><a href="#packs">Forfaits</a></li>
       <li><a href="#galerie">Galerie</a></li>
       <li><a href="#zone">Zone</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -988,6 +1034,7 @@
   <div id="mob-menu">
     <button class="mob-close" id="mob-close">✕</button>
     <a href="#prestations" onclick="closeMob()">Prestations</a>
+    <a href="#packs" onclick="closeMob()">Forfaits</a>
     <a href="#galerie" onclick="closeMob()">Galerie</a>
     <a href="#zone" onclick="closeMob()">Zone</a>
     <a href="#contact" onclick="closeMob()">Contact</a>
@@ -1107,6 +1154,76 @@
           <div class="depose-name">Dépose</div>
         </div>
         <div class="depose-price">10€</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ PACKS / FORFAITS ══════════════════════════════ -->
+  <section id="packs" class="section" style="background: var(--card-bg);">
+    <div class="galerie-inner">
+      <span class="s-script r">Événements</span>
+      <h2 class="s-title r r1">Forfaits &amp; Packs</h2>
+      <div class="wavy-line r r2"></div>
+
+      <div class="pack-grid r r3">
+
+        <!-- Pack 1 : Le Grand Jour -->
+        <div class="pcard">
+          <div class="pcard-img-wrap">
+            <img src="assets/images/pack-grand-jour.jpg" alt="Pack Mariage Le Grand Jour" class="pcard-img">
+          </div>
+          <div class="pcard-body">
+            <p class="pcard-cat">Forfait Premium</p>
+            <h3 class="pcard-name">"Le Grand Jour"</h3>
+            <div class="wavy-line"></div>
+            <p class="pack-quote">« La sérénité à domicile pour le grand jour »</p>
+            <div class="pack-list">
+              • 1 Essai Cil à Cil (3-4 semaines avant)<br>
+              • La Pose Complète Définitive (J-2)<br>
+              • Pose d'Ongles mains au choix (Gel-X ou Semi-permanent) &amp; Semi-permanent pieds
+              <em>(Option French | Nail Art incluse)</em>
+            </div>
+            <div class="pcard-price">145€</div>
+          </div>
+        </div>
+
+        <!-- Pack 2 : Mise en Lumière -->
+        <div class="pcard">
+          <div class="pcard-img-wrap">
+            <img src="assets/images/pack-mise-en-lumiere.jpg" alt="Pack Soirée Mise en Lumière" class="pcard-img">
+          </div>
+          <div class="pcard-body">
+            <p class="pcard-cat">Anniversaire, Soirée &amp; Pro</p>
+            <h3 class="pcard-name">"Mise en Lumière"</h3>
+            <div class="wavy-line"></div>
+            <p class="pack-quote">« Le total look glamour pour briller à votre fête et sur vos photos »</p>
+            <div class="pack-list">
+              • Rallongement ongles (Pose Américaine | Gel-X)<br>
+              • Pose Complète Cil à Cil
+            </div>
+            <div class="pcard-price">95€</div>
+          </div>
+        </div>
+
+        <!-- Pack 3 : Escale Beauté -->
+        <div class="pcard">
+          <div class="pcard-img-wrap">
+            <img src="assets/images/pack-escale-beaute.jpg" alt="Pack Été Escale Beauté" class="pcard-img">
+          </div>
+          <div class="pcard-body">
+            <p class="pcard-cat">Vacances &amp; Été</p>
+            <h3 class="pcard-name">"Escale Beauté"</h3>
+            <div class="wavy-line"></div>
+            <p class="pack-quote">« Un look impeccable sans effort, idéal pour la plage et la piscine »</p>
+            <div class="pack-list">
+              • Pose Complète Cil à Cil<br>
+              • Semi-permanent mains &amp; pieds
+              <em>(Option French | Nail Art incluse)</em>
+            </div>
+            <div class="pcard-price">90€</div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
