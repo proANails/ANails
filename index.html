@@ -303,6 +303,10 @@
       line-height: 1.8;
       max-width: 500px;
       color: var(--text-mid);
+      margin-bottom: 12px;
+    }
+
+    .hero-desc:last-of-type {
       margin-bottom: 32px;
     }
 
@@ -437,7 +441,7 @@
       align-items: center;
       font-size: 32px;
       color: rgba(255, 255, 255, 0.9);
-      text-shadow: 0 1px 6px rgba(0,0,0,0.5);
+      text-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
       opacity: 0;
       transition: opacity 0.3s ease;
       padding: 0 14px;
@@ -470,7 +474,7 @@
       backdrop-filter: blur(4px);
       padding: 5px 10px;
       border-radius: 14px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
     }
 
     .switcher-dot {
@@ -503,7 +507,7 @@
       border-radius: 4px;
       z-index: 5;
       font-weight: 500;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
       transition: all 0.3s ease;
     }
 
@@ -973,6 +977,7 @@
     }
 
     @media (max-width: 900px) {
+
       .pack-grid,
       .cils-grid {
         grid-template-columns: 1fr;
@@ -1083,7 +1088,7 @@
   <!-- ══ NAV ════════════════════════════════════════ -->
   <nav id="nav">
     <a href="#" class="nav-logo-wrap">
-      <img src="assets/images/logo.png" alt="A'Nails Beauty" class="nav-logo-img">
+      <img src="assets/images/logo.jpg" alt="A'Nails Beauty" class="nav-logo-img">
     </a>
     <ul class="nav-links">
       <li><a href="#prestations">Prestations</a></li>
@@ -1113,17 +1118,23 @@
     <div class="hero-card r">
       <h1 class="hero-title-main r r1">A'Nails Beauty</h1>
       <div class="hero-title-sub r r2">by Anaïs</div>
-      <p class="hero-location r r2">Montpellier, France</p>
+      <p class="hero-location r r2">Le Crès | Montpellier</p>
 
-      <img src="assets/images/selfie-anais.png" alt="Anaïs, prothésiste ongulaire à Montpellier" class="hero-selfie r r3">
+      <img src="assets/images/selfie-anais.png" alt="Anaïs, prothésiste ongulaire à Montpellier"
+        class="hero-selfie r r3">
 
       <div class="hero-intro r r4">Meet Your Nail & Lash Tech</div>
       <p class="hero-desc r r4">
-        🎓 Professionnelle de la beauté diplômée<br>
-        Prothésiste ongulaire & technicienne en extension de cils certifiée<br><br>
-        Experte en beauté du regard et des ongles, je mets mon savoir-faire à votre service directement chez vous. Spécialisée en renforcement, nail art et extensions de cils, je propose des prestations personnalisées adaptées à vos envies et vos besoins.<br><br>
-        Mon objectif : vous offrir un moment agréable à domicile avec un résultat soigné, durable et sur mesure ✨<br><br>
-        🎀 Intervention sur rendez-vous 🎀
+        Je suis Anaïs, professionnelle de la beauté spécialisée dans la mise en beauté des ongles et du regard.
+      </p>
+      <p class="hero-desc r r4">
+        Je me déplace à votre domicile à Le Crès, Montpellier, et dans les communes alentours pour vous proposer des
+        prestations personnalisées, dans un cadre confortable et soigné.
+      </p>
+      <p class="hero-desc r r4">
+        Chaque rendez-vous est pensé selon vos envies,
+        votre style et la nature de vos ongles ou de vos cils. Mon objectif : vous offrir un résultat élégant, durable
+        et personnalisé, sans avoir à vous déplacer.
       </p>
 
       <a href="https://iarabeauty.com/fr/pro/a.nailspro" target="_blank" rel="noopener" class="hero-cta r r5">
@@ -1177,7 +1188,8 @@
         <!-- French & Nail Art -->
         <div class="pcard r r3">
           <div class="pcard-img-wrap card-switcher" id="nailart-switcher">
-            <img src="assets/images/french-classique.jpg" alt="French classique" class="pcard-img card-img-slide active">
+            <img src="assets/images/french-classique.jpg" alt="French classique"
+              class="pcard-img card-img-slide active">
             <img src="assets/images/nail_art_avant.jpg" alt="Nail art" class="pcard-img card-img-slide">
             <button class="switcher-arrow left" onclick="switchCardImg(0)" aria-label="Voir French">‹</button>
             <button class="switcher-arrow right" onclick="switchCardImg(1)" aria-label="Voir Nail Art">›</button>
@@ -1191,7 +1203,8 @@
             <p class="pcard-cat">Option</p>
             <h3 class="pcard-name">French &amp;<br>Nail Art</h3>
             <div class="wavy-line"></div>
-            <p class="pcard-desc">French classique, dégradés, motifs floraux, pierres, lignes graphiques… laissez libre cours à votre créativité.</p>
+            <p class="pcard-desc">French classique, dégradés, motifs floraux, pierres, lignes graphiques… laissez libre
+              cours à votre créativité.</p>
             <div class="pcard-price">+5€</div>
             <p class="pcard-note">À ajouter sur toute prestation</p>
           </div>
@@ -1433,7 +1446,8 @@
   <!-- ══ FOOTER ═══════════════════════════════════════ -->
   <footer>
     <img src="assets/images/logo.png" alt="A'Nails Beauty" class="footer-logo">
-    <div class="footer-copy">© 2026 · A'Nails Beauty · Prothésiste Ongulaire & Extensions de Cils · Montpellier &amp; Alentours</div>
+    <div class="footer-copy">© 2026 · A'Nails Beauty · Prothésiste Ongulaire & Extensions de Cils · Montpellier &amp;
+      Alentours</div>
   </footer>
 
   <!-- ══ TWEAKS ════════════════════════════════════════ -->
